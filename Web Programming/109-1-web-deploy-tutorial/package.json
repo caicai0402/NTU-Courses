@@ -1,0 +1,46 @@
+{
+  "name": "my-sudoku",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "-": "^0.0.1",
+    "@material-ui/core": "^4.11.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "fireworks": "^2.2.6",
+    "fs": "^0.0.1-security",
+    "list-files": "^1.1.4",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-loading": "^2.0.3",
+    "react-scripts": "4.0.0",
+    "save-dev": "^0.0.1-security",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
