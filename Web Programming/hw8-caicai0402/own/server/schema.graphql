@@ -1,0 +1,51 @@
+type Message {
+  name: String!
+  talk_to: String!
+  body: String!
+}
+
+type User {
+  name: String!
+  password: String!
+  friends: [String]!
+}
+
+type Query {
+  messages(name: String!, talk_to: String!, body: String!): [Message!]!
+  messages_test(name: String!, talk_to: String!, body: String!): [Message!]!
+  users(name: String!, password: String!): [User!]!
+  users_with_password(name: String!, password: String!): [User!]!
+  users_test(name: String!, password: String!): [User!]!
+}
+
+type Mutation {
+  createMessage(name: String!, talk_to: String!, body: String!): Message!
+  deleteMessage(name: String!, talk_to: String!, body: String!): Message!
+  updateMessage(name: String!, talk_to: String!, body: String!, update: String!): Message!
+
+  createUser(name: String!, password: String!, friends: [String]!): User!
+  deleteUser(name: String!, password: String!): User!
+  updateUser(name: String!, password: String!, friends: [String]!, update: String!): User!
+}
+
+enum MutationType {
+  CREATED
+  UPDATED
+  DELETED
+}
+
+type Subscription {
+  message(name: String, body: String): MessageSubscriptionPayload!
+  user(name: String, password: String): UserSubscriptionPayload!
+}
+
+type MessageSubscriptionPayload {
+  mutation: MutationType!
+  data: Message!
+}
+
+type UserSubscriptionPayload {
+  mutation: MutationType!
+  data: User!
+}
+

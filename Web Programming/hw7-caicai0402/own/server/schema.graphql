@@ -1,0 +1,22 @@
+type Message {
+  name: String!
+  body: String!
+}
+
+type Query {
+  name(query: String): [Message!]!
+  body(query: String): [Message!]!
+}
+
+type Mutation {
+  createMessage(name: String!, body: String!): Message!
+  deleteMessage(name: String!, body: String!): Message!
+  updateMessage(name: String!, body: String!, update: String!): Message!
+}
+
+enum MutationType {
+  CREATED
+  UPDATED
+  DELETED
+}
+
