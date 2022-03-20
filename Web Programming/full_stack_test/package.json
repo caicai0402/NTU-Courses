@@ -1,0 +1,14 @@
+{
+  "name": "full_stack_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "cd frontend && yarn start",
+    "server": "cd backend && yarn server"
+  },
+  "dependencies": {
+    "react": "^17.0.1"
+  }
+}

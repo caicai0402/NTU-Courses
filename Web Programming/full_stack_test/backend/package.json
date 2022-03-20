@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "curl": "^0.1.4",
+    "express": "^4.17.1",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.6"
+  }
+}
