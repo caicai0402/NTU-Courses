@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery.ui.touch-punch.min.js"></script>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Music Player</title>
+        <style type="text/css">
+            body{
+                color: rgb(87, 37, 168);
+                background-color: #d1eaf0
+                }
+            #Box1{
+                margin:0px 0px;
+                border:20px rgb(232, 239, 243) solid;
+                padding:10px;
+                background-color:#120335;
+                position: fixed;
+                width: 1200px;
+                height:650px;
+                top: 50%;
+                left: 50%;
+                margin-left:-630px;
+                margin-top:-355px;
+                z-index: 0;
+                }
+            #timeline{
+                width: 400px;
+                height: 18px;
+                margin-top: 20px;
+                float: left;
+                border-radius: 15px;
+                background: white;
+                position: fixed;
+                top: 58%;
+                left: 55%;
+                z-index:2
+                }
+            #volume{
+                width: 400px;
+                height: 18px;
+                margin-top: 20px;
+                float: left;
+                border-radius: 15px;
+                background:white;
+                position: fixed;
+                top: 47%;
+                left: 55%;
+                z-index:2
+                }
+            #timelinedot{
+                width: 24px;
+                height: 18px;
+                margin-top: 20px;
+                float: left;
+                border:10px;
+                border-radius: 18px;
+                background: rgb(156, 215, 238);
+                position: fixed;
+                top: 58%;
+                left: 55%;
+                z-index:3;
+                cursor: pointer;
+                }
+            #volumedot{
+                width: 24px;
+                height: 18px;
+                margin-top: 20px;
+                float: left;
+                border: 10px;
+                border-radius: 18px;
+                background: rgb(156, 215, 238);
+                position: fixed;
+                top: 47%;
+                left: 55%;
+                z-index:3;
+                cursor: pointer;
+                }
+        </style>
+
+        <script>
+            $(function () {
+                    $("div[id='timelinedot']").draggable({
+                            axis: "x"
+                    });
+                    $("div[id='volumedot']").draggable({
+                            axis: "x"
+                    });
+            });
+            </script>
+    </head>
+
+<!--
+    <audio controls>
+        <source src="https://s3-ap-northeast-1.amazonaws.com/dazedbear-assets/Bluebird.flac">
+        <source src="https://s3-ap-northeast-1.amazonaws.com/dazedbear-assets/Bluebird.wav" type="audio/wav">
+        <source src="https://s3-ap-northeast-1.amazonaws.com/dazedbear-assets/Bluebird.mp3" type="audio/mpeg">
+        遇到不支援的瀏覽器會出現這行字
+    </audio>
+-->
+
+    <body>
+        <div id="Box1">
+            <div style="position:fixed; top:50%; margin-top:-250px; left:50%; margin-left:-550px; z-index:1">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81oFpzU4d3L._SL1400_.jpg" width="40%">
+            </div>
+            <div style="position: fixed; top: 21%; left: 55%; z-index: 2">
+                <font color="white" size="6" face="DFKai-sb"><em>
+                曲名：<p style="line-height:700%">
+                專輯：
+                </em></font></div>
+
+            <div style="position: fixed; top: 22%; left: 71%; z-index: 2">
+            <font color="white" size="6" face="DFKai-sb" align="center"><em>
+                I Want You<p style="line-height:700%">
+                Abbey Road
+            </em></font></div>
+
+            <input type="button" value="▶" style="width:70px; height:70px; position: fixed; top: 72%; left: 66%; font-size:35px; border-radius:70px; background-color:#d1eaf0 ;z-index: 2">
+            <input type="button" value="⇥" style="width:70px; height:70px; position: fixed; top: 72%; left: 71%; font-size:35px; border-radius:70px; background-color:#d1eaf0 ;z-index: 2">
+            <input type="button" value="⇤" style="width:70px; height:70px; position: fixed; top: 72%; left: 61%; font-size:35px; border-radius:70px; background-color:#d1eaf0 ;z-index: 2">
+            <input type="button" value="↻" style="width:70px; height:70px; position: fixed; top: 72%; left: 56%; font-size:35px; border-radius:70px; background-color:#d1eaf0 ;z-index: 2">
+            <input type="button" value="♫" style="width:70px; height:70px; position: fixed; top: 72%; left: 76%; font-size:35px; border-radius:70px; background-color:#d1eaf0 ;z-index: 2">
+            <input type="button" value="🔈" style="width:45px; height:45px; position: fixed; top: 48%; left: 50%; font-size:25px; border-radius:45px; background-color:rgb(220, 229, 236) ;z-index: 2">
+            <input type="button" value="🔊" style="width:45px; height:45px; position: fixed; top: 48%; left: 85%; font-size:25px; border-radius:45px; background-color:rgb(220, 229, 236) ;z-index: 2">
+            
+            <div id="timeline"></div>
+            <div id="volume"></div>
+            <div id="timelinedot"  class="drag"></div>
+            <div id="volumedot"  class="drag"></div>
+
+      </div>
+    </body>
+
+</html>
